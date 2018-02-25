@@ -100,6 +100,9 @@ extension CameraViewController {
       //Save
       DataModel.shared.saveImage(image: image, title: "Teste")
       
+      let imagem = DataModel.shared.loadImageFromPath(imageName: "Teste")
+      let imageView = UIImageView(image: imagem)
+      self.view.addSubview(imageView)
     //  DataModel.shared.loadImageFromPath(imageName: "Teste")
    //   try? PHPhotoLibrary.shared().performChangesAndWait {
       //  PHAssetChangeRequest.creationRequestForAsset(from: image)
