@@ -21,9 +21,6 @@ class CameraViewController: UIViewController {
   @IBOutlet fileprivate var toggleCameraButton: UIButton!
   @IBOutlet fileprivate var toggleFlashButton: UIButton!
   
-  ///Allows the user to put the camera in video mode.
-  //@IBOutlet fileprivate var videoModeButton: UIButton!
-  
   let cameraController = CameraHelper()
   
   override var prefersStatusBarHidden: Bool { return true }
@@ -96,10 +93,17 @@ extension CameraViewController {
         print(error ?? "Image capture error")
         return
       }
+      //Convert to PixelBuffer
       
-      try? PHPhotoLibrary.shared().performChangesAndWait {
-        PHAssetChangeRequest.creationRequestForAsset(from: image)
-      }
+      // Test on CoreML
+      
+      //Save
+      DataModel.shared.saveImage(image: image, title: "Teste")
+      
+    //  DataModel.shared.loadImageFromPath(imageName: "Teste")
+   //   try? PHPhotoLibrary.shared().performChangesAndWait {
+      //  PHAssetChangeRequest.creationRequestForAsset(from: image)
+     // }
     }
   }
   
