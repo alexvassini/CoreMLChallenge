@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="58e-LB-SUO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -49,10 +49,10 @@
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
         </scene>
-        <!--View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="7Nz-Kk-82X">
             <objects>
-                <viewController id="58e-LB-SUO" sceneMemberID="viewController">
+                <viewController id="58e-LB-SUO" customClass="CameraViewController" customModule="CoreMLChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N4b-gH-DEq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,6 +71,9 @@
                                                 </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" image="Flash Off Icon"/>
+                                                <connections>
+                                                    <action selector="toggleFlash:" destination="58e-LB-SUO" eventType="touchUpInside" id="WjB-5O-UAh"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tk3-H5-9o9">
                                                 <rect key="frame" x="315" y="60" width="44" height="44"/>
@@ -80,6 +83,9 @@
                                                 </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" image="Rear Camera Icon"/>
+                                                <connections>
+                                                    <action selector="switchCameras:" destination="58e-LB-SUO" eventType="touchUpInside" id="CAV-GD-ZIS"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dju-yn-add">
                                                 <rect key="frame" x="16" y="587" width="44" height="44"/>
@@ -108,6 +114,9 @@
                                             <constraint firstAttribute="height" constant="55" id="jmc-L7-KTg"/>
                                             <constraint firstAttribute="width" constant="55" id="mEh-Y7-fnM"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="captureImage:" destination="58e-LB-SUO" eventType="touchUpInside" id="afJ-TU-wPZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -132,6 +141,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Q1T-K7-qMK"/>
                     </view>
+                    <connections>
+                        <outlet property="captureButton" destination="Xk5-H0-n5G" id="okM-Ig-yEi"/>
+                        <outlet property="capturePreviewView" destination="eQY-ly-3U6" id="Le5-Hp-Ysy"/>
+                        <outlet property="photoModeButton" destination="Dju-yn-add" id="628-tq-r3i"/>
+                        <outlet property="toggleCameraButton" destination="tk3-H5-9o9" id="6xH-tH-duN"/>
+                        <outlet property="toggleFlashButton" destination="G5B-Dr-uo3" id="Wxr-kI-TBq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v5l-03-eh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

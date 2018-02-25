@@ -16,6 +16,8 @@
 		AC06A50D203CD7DC003B1E07 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC06A50C203CD7DC003B1E07 /* LocationHelper.swift */; };
 		AC72F0DB2042F12E00F7A0C1 /* PixelBufferExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC72F0DA2042F12E00F7A0C1 /* PixelBufferExtension.swift */; };
 		AC72F0DD2042FAD700F7A0C1 /* Nudity.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AC72F0DC2042FAD700F7A0C1 /* Nudity.mlmodel */; };
+		AC72F0DF2042FCBD00F7A0C1 /* CameraHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC72F0DE2042FCBD00F7A0C1 /* CameraHelper.swift */; };
+		AC72F0E12043091600F7A0C1 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC72F0E02043091600F7A0C1 /* CameraViewController.swift */; };
 		E3E5DD3B8EBF19BC3ED474A5 /* Pods_CoreMLChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E39362D8E30B85C92DA73866 /* Pods_CoreMLChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,8 @@
 		AC06A50C203CD7DC003B1E07 /* LocationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
 		AC72F0DA2042F12E00F7A0C1 /* PixelBufferExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelBufferExtension.swift; sourceTree = "<group>"; };
 		AC72F0DC2042FAD700F7A0C1 /* Nudity.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Nudity.mlmodel; sourceTree = "<group>"; };
+		AC72F0DE2042FCBD00F7A0C1 /* CameraHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraHelper.swift; sourceTree = "<group>"; };
+		AC72F0E02043091600F7A0C1 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		B110836638AC67520A8C4F4C /* Pods-CoreMLChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreMLChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoreMLChallenge/Pods-CoreMLChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		E39362D8E30B85C92DA73866 /* Pods_CoreMLChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreMLChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -105,6 +109,7 @@
 				AC06A50C203CD7DC003B1E07 /* LocationHelper.swift */,
 				AC06A50A203CD771003B1E07 /* UIColorExtension.swift */,
 				AC72F0DA2042F12E00F7A0C1 /* PixelBufferExtension.swift */,
+				AC72F0DE2042FCBD00F7A0C1 /* CameraHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 		AC06A50E203CE825003B1E07 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				AC72F0E02043091600F7A0C1 /* CameraViewController.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -247,6 +253,8 @@
 				AC06A4FA203CD329003B1E07 /* ViewController.swift in Sources */,
 				AC06A4F8203CD329003B1E07 /* AppDelegate.swift in Sources */,
 				AC72F0DB2042F12E00F7A0C1 /* PixelBufferExtension.swift in Sources */,
+				AC72F0E12043091600F7A0C1 /* CameraViewController.swift in Sources */,
+				AC72F0DF2042FCBD00F7A0C1 /* CameraHelper.swift in Sources */,
 				AC06A50B203CD771003B1E07 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
