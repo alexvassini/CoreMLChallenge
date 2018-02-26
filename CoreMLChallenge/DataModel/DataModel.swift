@@ -16,7 +16,9 @@ class DataModel {
 
     //Save croped image in app storage
     
-  func saveImage(image: UIImage , title: String){
+  func saveImage(image: UIImage) -> String {
+    
+    let title = String(Date().timeIntervalSince1970)
     
     //create an instance of the FileManager
     let fileManager = FileManager.default
@@ -28,6 +30,8 @@ class DataModel {
     //store it in the document directory
     
     fileManager.createFile(atPath: imagePath as String, contents: data, attributes: nil)
+    
+    return imagePath
     
   }
     

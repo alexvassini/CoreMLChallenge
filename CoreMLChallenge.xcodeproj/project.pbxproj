@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B8F87BF204377A700F4DC60 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8F87BE204377A700F4DC60 /* Pin.swift */; };
+		6B8F87C12043819D00F4DC60 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8F87C02043819C00F4DC60 /* DescriptionViewController.swift */; };
 		AC06A4F8203CD329003B1E07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC06A4F7203CD329003B1E07 /* AppDelegate.swift */; };
 		AC06A4FA203CD329003B1E07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC06A4F9203CD329003B1E07 /* ViewController.swift */; };
 		AC06A4FD203CD329003B1E07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC06A4FB203CD329003B1E07 /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		50B35C686BD5670B63744F10 /* Pods-CoreMLChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreMLChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoreMLChallenge/Pods-CoreMLChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		6B8F87BE204377A700F4DC60 /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
+		6B8F87C02043819C00F4DC60 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		AC06A4F4203CD329003B1E07 /* CoreMLChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreMLChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC06A4F7203CD329003B1E07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC06A4F9203CD329003B1E07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +67,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6B8F87BD2043779A00F4DC60 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC72F0DC2042FAD700F7A0C1 /* Nudity.mlmodel */,
+				6B8F87BE204377A700F4DC60 /* Pin.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A389C998491C3D451B099154 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,12 +105,13 @@
 		AC06A4F6203CD329003B1E07 /* CoreMLChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				AC72F0DC2042FAD700F7A0C1 /* Nudity.mlmodel */,
+				6B8F87BD2043779A00F4DC60 /* Model */,
 				AC06A509203CD740003B1E07 /* Utils */,
 				AC06A50E203CE825003B1E07 /* Map */,
 				AC72F0E220431CB700F7A0C1 /* Camera */,
-				AC06A4F7203CD329003B1E07 /* AppDelegate.swift */,
 				AC72F0E320431CCB00F7A0C1 /* DataModel */,
+				ACF68AB720445816005D8F7C /* DescriptionPopUp */,
+				AC06A4F7203CD329003B1E07 /* AppDelegate.swift */,
 				AC06A4FB203CD329003B1E07 /* Main.storyboard */,
 				AC06A4FE203CD329003B1E07 /* Assets.xcassets */,
 				AC06A500203CD329003B1E07 /* LaunchScreen.storyboard */,
@@ -129,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				AC72F0E02043091600F7A0C1 /* CameraViewController.swift */,
+				6B8F87C02043819C00F4DC60 /* DescriptionViewController.swift */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -139,6 +154,13 @@
 				AC72F0E420431CED00F7A0C1 /* DataModel.swift */,
 			);
 			path = DataModel;
+			sourceTree = "<group>";
+		};
+		ACF68AB720445816005D8F7C /* DescriptionPopUp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DescriptionPopUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,8 +294,10 @@
 				AC06A4FA203CD329003B1E07 /* ViewController.swift in Sources */,
 				AC06A4F8203CD329003B1E07 /* AppDelegate.swift in Sources */,
 				AC72F0DB2042F12E00F7A0C1 /* PixelBufferExtension.swift in Sources */,
+				6B8F87BF204377A700F4DC60 /* Pin.swift in Sources */,
 				AC72F0E12043091600F7A0C1 /* CameraViewController.swift in Sources */,
 				AC72F0DF2042FCBD00F7A0C1 /* CameraHelper.swift in Sources */,
+				6B8F87C12043819D00F4DC60 /* DescriptionViewController.swift in Sources */,
 				AC06A50B203CD771003B1E07 /* UIColorExtension.swift in Sources */,
 				AC72F0E520431CED00F7A0C1 /* DataModel.swift in Sources */,
 			);
