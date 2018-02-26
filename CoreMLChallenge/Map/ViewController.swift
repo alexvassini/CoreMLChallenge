@@ -31,6 +31,7 @@ class ViewController: UIViewController, FinishCreation, MKMapViewDelegate {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    mapView.delegate = self
     locationHelper.listener = self
     locationHelper.requestLocation(onCompletion:nil)
     //mapView.addAnnotation(myPosition)
@@ -60,7 +61,7 @@ class ViewController: UIViewController, FinishCreation, MKMapViewDelegate {
         let description = view.annotation!.subtitle!
         self.pins.forEach { (pin) in
             if pin.description == description {
-                //go to detail screen
+                displayPopUp(pin: pin)
             }
         }
     }

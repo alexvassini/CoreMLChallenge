@@ -109,13 +109,6 @@ extension CameraViewController {
         
         self.pin = Pin(latitude: self.latitude, longitude: self.longitude, description: "", image: image, imagePath: path)
       
-     // let imagem = DataModel.shared.loadImageFromPath(imageName: "Teste")
-      //let imageView = UIImageView(image: imagem)
-      //self.view.addSubview(imageView)
-    //  DataModel.shared.loadImageFromPath(imageName: "Teste")
-   //   try? PHPhotoLibrary.shared().performChangesAndWait {
-      //  PHAssetChangeRequest.creationRequestForAsset(from: image)
-     // }
         self.performSegue(withIdentifier: "FillDetailScreen", sender: nil)
     }
   }

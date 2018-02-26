@@ -26,7 +26,7 @@ class DataModel {
     let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(title)
     
     //get the PNG data for this image
-    let data = UIImagePNGRepresentation(image)
+    let data = UIImageJPEGRepresentation(image, 1.0)
     //store it in the document directory
     
     fileManager.createFile(atPath: imagePath as String, contents: data, attributes: nil)
@@ -38,10 +38,9 @@ class DataModel {
     
     //load image from  app storage
     
-    func loadImageFromPath(imageName: String) -> UIImage? {
+    func loadImageFromPath(imagePath: String) -> UIImage? {
       
       let fileManager = FileManager.default
-      let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(imageName)
       
       if fileManager.fileExists(atPath: imagePath){
         return UIImage(contentsOfFile: imagePath)
