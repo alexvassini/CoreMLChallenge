@@ -31,15 +31,13 @@ class DescriptionPopUp: UIView {
   
   override func didMoveToSuperview() {
     self.descriptionLabel.text = pin.description
-    self.imageView.image = DataModel.shared.loadImageFromPath(imagePath: pin.imagePath)
+    self.imageView.image = DataModel.shared.loadImageFromPath(imagePath: pin.imagePath!)
   }
   
   init(frame: CGRect, pin: Pin) {
     super.init(frame: frame)
     
     self.pin = pin
-    //self.imageView = title  // get image
-    //self.descriptionLabel.text = pin.description
     xibSetup()
   }
   

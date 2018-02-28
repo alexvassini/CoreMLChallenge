@@ -6,7 +6,7 @@ target 'CoreMLChallenge' do
   use_frameworks!
 
 pod 'TPKeyboardAvoiding'
-
+pod 'ObjectMapper'
   # Pods for CoreMLChallenge
 
 end

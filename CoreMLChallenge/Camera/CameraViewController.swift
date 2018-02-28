@@ -108,7 +108,7 @@ extension CameraViewController {
         let path = DataModel.shared.saveImage(image: image)
         
         self.pin = Pin(latitude: self.latitude, longitude: self.longitude, description: "", image: image, imagePath: path)
-      
+
         self.performSegue(withIdentifier: "FillDetailScreen", sender: nil)
     }
   }

@@ -111,10 +111,10 @@
 		AC06A4F6203CD329003B1E07 /* CoreMLChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				6B8F87BD2043779A00F4DC60 /* Model */,
 				AC06A509203CD740003B1E07 /* Utils */,
 				AC06A50E203CE825003B1E07 /* Map */,
 				AC72F0E220431CB700F7A0C1 /* Camera */,
+				6B8F87BD2043779A00F4DC60 /* Model */,
 				AC72F0E320431CCB00F7A0C1 /* DataModel */,
 				ACF68AB720445816005D8F7C /* DescriptionPopUp */,
 				AC06A4F7203CD329003B1E07 /* AppDelegate.swift */,
@@ -284,10 +284,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CoreMLChallenge/Pods-CoreMLChallenge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
