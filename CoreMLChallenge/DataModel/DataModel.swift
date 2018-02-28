@@ -73,6 +73,22 @@ class DataModel {
     defaults.set(data, forKey: "Pins")
   }
   
+  func imageIsSafe(_ image: UIImage) -> Bool {
+    let model = Nudity()
+    let size = CGSize(width: 224, height: 224)
+    
+    guard let buffer = image.resize(to: size)?.pixelBuffer() else {
+      fatalError("Scaling or converting to pixel buffer failed!")
+    }
+    
+    guard let result = try? model.prediction(data: buffer) else {
+      fatalError("Prediction failed!")
+    }
+    
+    
+    return result.classLabel == "SFW"
+  }
+  
 }
 
 

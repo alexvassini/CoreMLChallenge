@@ -138,17 +138,35 @@
                                     <constraint firstAttribute="trailing" secondItem="eQY-ly-3U6" secondAttribute="trailing" id="yhM-Zm-Tln"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H69-gC-lCV">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="psE-qe-Seu">
+                                        <rect key="frame" x="169" y="283" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.34707319739999998" green="0.73750728369999996" blue="0.78481930489999996" alpha="0.47281722184065933" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="psE-qe-Seu" firstAttribute="centerX" secondItem="H69-gC-lCV" secondAttribute="centerX" id="e44-lY-8jz"/>
+                                    <constraint firstItem="psE-qe-Seu" firstAttribute="centerY" secondItem="H69-gC-lCV" secondAttribute="centerY" id="wxp-Fv-1Iw"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="H69-gC-lCV" secondAttribute="bottom" id="5p6-o9-tjG"/>
+                            <constraint firstItem="H69-gC-lCV" firstAttribute="leading" secondItem="Q1T-K7-qMK" secondAttribute="leading" id="CpW-rw-X9p"/>
                             <constraint firstItem="opJ-e2-clq" firstAttribute="leading" secondItem="Q1T-K7-qMK" secondAttribute="leading" id="Hk4-Be-6j7"/>
                             <constraint firstAttribute="bottom" secondItem="opJ-e2-clq" secondAttribute="bottom" id="fHQ-FV-2fh"/>
                             <constraint firstItem="opJ-e2-clq" firstAttribute="top" secondItem="Q1T-K7-qMK" secondAttribute="top" id="jrX-aF-YOf"/>
+                            <constraint firstItem="H69-gC-lCV" firstAttribute="trailing" secondItem="Q1T-K7-qMK" secondAttribute="trailing" id="mBo-Xs-Ju6"/>
                             <constraint firstAttribute="trailing" secondItem="opJ-e2-clq" secondAttribute="trailing" id="nxb-eG-oV5"/>
+                            <constraint firstItem="H69-gC-lCV" firstAttribute="top" secondItem="Q1T-K7-qMK" secondAttribute="top" id="vmT-gh-r9Y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Q1T-K7-qMK"/>
                     </view>
                     <connections>
+                        <outlet property="activittyView" destination="H69-gC-lCV" id="d0z-uC-Obt"/>
                         <outlet property="captureButton" destination="Xk5-H0-n5G" id="okM-Ig-yEi"/>
                         <outlet property="capturePreviewView" destination="eQY-ly-3U6" id="Le5-Hp-Ysy"/>
                         <outlet property="photoModeButton" destination="Dju-yn-add" id="628-tq-r3i"/>

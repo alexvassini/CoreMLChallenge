@@ -17,4 +17,9 @@ extension UIViewController {
     popUp.okCompletion = okCompletion
   }
   
+  func showUnsafePopUp(okCompletion: (()->())? = nil){
+    let popUp = UnsafePopUp(frame: view.frame)
+    popUp.showInView(view: view)
+    popUp.okCompletion = okCompletion
+  }
 }

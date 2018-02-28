@@ -1,21 +1,16 @@
 //
-//  DescriptionPopUp.swift
+//  UnsafePopUp.swift
 //  CoreMLChallenge
 //
-//  Created by Alexandre  Vassinievski on 26/02/2018.
+//  Created by Alexandre  Vassinievski on 27/02/2018.
 //  Copyright © 2018 Vassini. All rights reserved.
-//
+
 
 import UIKit
 
-class DescriptionPopUp: UIView {
-  
-  @IBOutlet weak var contentView: UIView!
-  @IBOutlet weak var descriptionLabel: UILabel!
-  @IBOutlet weak var imageView: UIImageView!
+class UnsafePopUp: UIView {
   
   var view: UIView!
-  var pin: Pin!
   var okCompletion: (() -> ())?
   
   var ypos : CGFloat {
@@ -30,14 +25,12 @@ class DescriptionPopUp: UIView {
   }
   
   override func didMoveToSuperview() {
-    self.descriptionLabel.text = pin.description
-    self.imageView.image = DataModel.shared.loadImageFromPath(imagePath: pin.imagePath!)
+  
   }
   
-  init(frame: CGRect, pin: Pin) {
+  override init(frame: CGRect) {
     super.init(frame: frame)
-    
-    self.pin = pin
+
     xibSetup()
   }
   
@@ -51,11 +44,11 @@ class DescriptionPopUp: UIView {
     view.frame = bounds
     view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     addSubview(view)
-
+    
   }
   
   func instanceFromNib() -> UIView {
-    let nibView = UINib(nibName: "DescriptionPopUp", bundle: Bundle(for: type(of: self))).instantiate(withOwner: self, options: nil)[0] as! UIView
+    let nibView = UINib(nibName: "UnsafePopUp", bundle: Bundle(for: type(of: self))).instantiate(withOwner: self, options: nil)[0] as! UIView
     return nibView
   }
   
@@ -94,4 +87,6 @@ class DescriptionPopUp: UIView {
     }
   }
   
+  
 }
+

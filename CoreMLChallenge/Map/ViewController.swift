@@ -10,7 +10,8 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class ViewController: UIViewController, FinishCreation, MKMapViewDelegate {
+class ViewController: UIViewController, FinishCreation ,MKMapViewDelegate {
+  
   
   @IBOutlet weak var mapView: MKMapView!
   
@@ -18,8 +19,6 @@ class ViewController: UIViewController, FinishCreation, MKMapViewDelegate {
   let regionRadius: CLLocationDistance = 800
   
   var pins: [Pin] = []
-  
-  
   
   var lastLocation: CLLocation? {
     didSet{
